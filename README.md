@@ -1,0 +1,2 @@
+### LFC API
+A *very* janky way of handling communications between two local instances of Lua interpreters. You probably shouldn't use this, especially considering it can overwrite other files. Why? I dunno.
