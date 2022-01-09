@@ -1,17 +1,17 @@
 local commlib = {}
 
-function commlib:init(cname)
+function commlib.init(cname)
     local handle = io.open(cname,"w")
     handle:close()
 end
 
-function commlib:send(cname,message)
+function commlib.send(cname,message)
     local handle = io.open(cname,"w")
     handle:write(message.."\n"..os.clock()+os.time())
     handle:close()
 end
 
-function commlib:waitrecieve(cname, timeout)
+function commlib.recieve(cname, timeout)
     local start_time = os.clock()
     local handle = io.open(cname,"r")
     local buffer = handle:read("*all")
