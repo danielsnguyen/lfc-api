@@ -1,2 +1,2 @@
 ## LFC API
-A *very* janky way of handling communications between two local instances of Lua interpreters. You probably shouldn't use this, especially considering it can overwrite other files. Why? I dunno.
+Handling communications between two local instances of Lua interpreters. Uses the file IO library to initalize and monitor a communication file, then returns data when something is written to the file. Require the main.lua file and collect the returned table. The table contains three functions; comm.init(commfileName), comm.receive(commfileName, init), comm.send(commfileName, message). Check default-example for an example.
